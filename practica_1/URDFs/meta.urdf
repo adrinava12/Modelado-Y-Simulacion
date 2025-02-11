@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<robot name="meta">
+
+<!-- Definicion de materiales -->
+    <material name="green">
+        <color rgba="0.0 1.0 0.0 1.0"/>
+    </material>
+
+<!-- Definicion de links -->
+    <link name="base_link">
+        <inertial>
+        <origin xyz="0.0 15.0 0.0" rpy="0.0 0.0 0.0"/>
+            <mass value="40.0"/>
+            <inertia ixx="0.38" ixy="0.0" ixz="0.0" iyy="0.075" iyz="0.0" izz="84.0"/>
+        </inertial>
+
+        <visual>
+            <origin xyz="0.0 15.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="2.5 1.0 0.05"/>
+            </geometry>
+            <material name="green"/> 
+        </visual>
+
+        <collision>
+            <origin xyz="0.0 15.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="2.5 1.0 0.05"/>
+            </geometry>
+            
+        </collision>
+        
+    </link>
+    
+</robot>
+
