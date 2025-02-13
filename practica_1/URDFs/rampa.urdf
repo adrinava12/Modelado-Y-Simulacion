@@ -9,13 +9,13 @@
 <!-- Definicion de links -->
     <link name="upwards_link">
         <inertial>
-            <origin xyz="0.0 -1.5 -0.75" rpy="66.437 0.0 0.0"/>
+            <origin xyz="0.0 -11.5 -0.75" rpy="66.437 0.0 0.0"/>
             <mass value="40.0"/>
             <inertia ixx="0.38" ixy="0.0" ixz="0.0" iyy="0.075" iyz="0.0" izz="84.0"/>
         </inertial>
 
         <visual>
-            <origin xyz="0.0 -1.5 -0.75" rpy="66.437 0.0 0.0"/>
+            <origin xyz="0.0 -11.5 -0.75" rpy="66.437 0.0 0.0"/>
             <geometry>
                 <box size="1.5 3.35 0.0"/>
             </geometry>
@@ -23,7 +23,7 @@
         </visual>
 
         <collision>
-            <origin xyz="0.0 -1.5 -0.75" rpy="66.437 0.0 0.0"/>
+            <origin xyz="0.0 -11.5 -0.75" rpy="66.437 0.0 0.0"/>
             <geometry>
                 <box size="1.5 3.35 0.0"/>
             </geometry>
@@ -32,13 +32,13 @@
 
     <link name="base_link">
         <inertial>
-            <origin xyz="0.0 10.0 0.75" rpy="0.0 0.0 0.0"/>
+            <origin xyz="0.0 0.0 0.75" rpy="0.0 0.0 0.0"/>
             <mass value="100.0"/>
             <inertia ixx="0.95" ixy="0.0" ixz="0.0" iyy="0.19" iyz="0.0" izz="210.0"/>
         </inertial>
 
         <visual>
-            <origin xyz="0.0 10.0 0.75" rpy="0.0 0.0 0.0"/>
+            <origin xyz="0.0 0.0 0.75" rpy="0.0 0.0 0.0"/>
             <geometry>
                 <box size="1.5 4.0 1.5"/>
             </geometry>
@@ -46,7 +46,7 @@
         </visual>
 
         <collision>
-            <origin xyz="0.0 10.0 0.75" rpy="0.0 0.0 0.0"/>
+            <origin xyz="0.0 0.0 0.75" rpy="0.0 0.0 0.0"/>
             <geometry>
                 <box size="1.5 4.0 1.5"/>
             </geometry> 
@@ -56,13 +56,13 @@
 
     <link name="downwards_link">
         <inertial>
-            <origin xyz="0.0 1.5 -0.75" rpy="-66.437 0.0 0.0"/>
+            <origin xyz="0.0 -8.5 -0.75" rpy="-66.437 0.0 0.0"/>
             <mass value="40.0"/>
             <inertia ixx="0.38" ixy="0.0" ixz="0.0" iyy="0.075" iyz="0.0" izz="84.0"/>
         </inertial>
 
         <visual>
-            <origin xyz="0.0 1.5 -0.75" rpy="-66.437 0.0 0.0"/>
+            <origin xyz="0.0 -8.5 -0.75" rpy="-66.437 0.0 0.0"/>
             <geometry>
                 <box size="1.5 3.35 0.0"/>
             </geometry>
@@ -70,7 +70,7 @@
         </visual>
 
         <collision>
-            <origin xyz="0.0 1.5 -0.75" rpy="-66.437 0.0 0.0"/>
+            <origin xyz="0.0 -8.5 -0.75" rpy="-66.437 0.0 0.0"/>
             <geometry>
                 <box size="1.5 3.35 0.0"/>
             </geometry>
