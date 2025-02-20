@@ -19,7 +19,7 @@ plt.plot(position_2, velocity_2)
 plt.plot(position_3, velocity_3)
 
 
-plt.legend(["3.1", "3.2", "3.3"])
+plt.legend(["Escenario 3.1", "Escenario 3.2", "Escenario 3.3"])
 plt.title("Relacion entre velocidad y posicion")
 plt.xlabel("Posicion husky")
 plt.ylabel("Velocidad husky")
