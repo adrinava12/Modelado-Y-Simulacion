@@ -9,12 +9,6 @@
 
 <!-- Definicion de links -->
     <link name="base_link">
-        
-        <!-- <inertial>
-            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
-            <mass value="0.0"/>
-            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
-        </inertial> -->
 
         <visual>
             <origin xyz="0.0 0.0 0.5" rpy="0.0 0.0 0.0"/>
@@ -35,11 +29,11 @@
     </link>
 
     <link name="barrier_link">
-        <!-- <inertial>
+        <inertial>
             <origin xyz="1.25 0.0 0.15" rpy="0.0 0.0 0.0"/>
             <mass value="5.0"/>
-            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
-        </inertial> -->
+            <inertia ixx="10.41" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="10.41"/>
+        </inertial>
 
         <visual>
             <origin xyz="1.25 0.0 0.15" rpy="0.0 0.0 0.0"/>
