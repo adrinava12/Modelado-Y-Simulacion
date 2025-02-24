@@ -57,17 +57,53 @@ for joint in joints:
 
 # Posicion inicial del husky
 prev_husky_pos, _ = p.getBasePositionAndOrientation(huskyId)
+
+# kp = 28
+# kd = 1
+# ki = 0.001
+
+# kp = 28
+# kd = 1
+# ki = 0.0001
+
+kp = 2  # Reducido para evitar oscilaciones grandes
+kd = 5   # Aumentado para amortiguar el sistema
+ki = 0.0025
+referencia = 2
+integral = 0
+prev_error = 0
 try:
     while True:
+        error = referencia - p.getBaseVelocity(huskyId)[0][1]
+
+        actual_time = time.time() - start_time
+
+        # Componente proporcional
+        P = kp * error
+
+        # Componente integral
+        integral += error * actual_time
+        I = ki * integral
+
+        # Componente derivativa
+        derivative = (error - prev_error) / actual_time
+        D = kd * derivative
+
+        vel = P + I + D
+        print(vel, error)
+
+        # Actualizar valores anteriores
+        prev_error = error
+
         p.setJointMotorControlArray(huskyId,
                                 joints,
                                 p.VELOCITY_CONTROL,
-                                targetVelocities=[11,11,11,11])
+                                targetVelocities=[vel,vel,vel,vel])
         
         p.setJointMotorControlArray(huskyId,
                                 joints,
                                 p.TORQUE_CONTROL,
-                                forces=[25,25,25,25])
+                                forces=[15,15,15,15])
         
         # Posicion actual del husky
         husky_pos, _ = p.getBasePositionAndOrientation(huskyId)
@@ -78,7 +114,6 @@ try:
             prev_husky_pos = husky_pos
 
             # Calculo de tiempo actual
-            actual_time = time.time() - start_time
             start_time = time.time()
 
             # Insertar datos en lista
@@ -97,6 +132,6 @@ except KeyboardInterrupt:
 np_data = np.array(data, dtype=float)
 
 # Guardar en un archivo CSV asegurando formato numérico
-np.savetxt("csv/fase3-3.csv", np_data, delimiter=",", fmt="%.6f")
+np.savetxt("csv/fase4.csv", np_data, delimiter=",", fmt="%.6f")
 	
 p.disconnect()
