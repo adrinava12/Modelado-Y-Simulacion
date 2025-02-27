@@ -66,32 +66,66 @@ prev_husky_pos, _ = p.getBasePositionAndOrientation(huskyId)
 # kd = 1
 # ki = 0.0001
 
-kp = 2  # Reducido para evitar oscilaciones grandes
-kd = 5   # Aumentado para amortiguar el sistema
-ki = 0.0025
+kp_llano = 30.0  # Reducido para evitar oscilaciones grandes
+kd_llano = 1   # Aumentado para amortiguar el sistema
+ki_llano = 0.0035
+
+kp_subiendo = 20  # Reducido para evitar oscilaciones grandes
+kd_subiendo = 10   # Aumentado para amortiguar el sistema
+ki_subiendo = 0.004
+
+kp_bajando = 2.5  # Reducido para evitar oscilaciones grandes
+kd_bajando = 15   # Aumentado para amortiguar el sistema
+ki_bajando = 0.0000005
+
 referencia = 2
 integral = 0
 prev_error = 0
+# Parámetros de velocidad máxima y ajuste
+vel_max_llano = 11.2
+vel_max_subida = 22
+vel_max_bajada = 4
+ajuste_subida = 0.1
+ajuste_bajada = 0.1
+ajuste_llano = 0.09
 try:
     while True:
+
+        orientation = p.getBasePositionAndOrientation(huskyId)[1]
+
+        roll, pitch, yaw = p.getEulerFromQuaternion(orientation)
+
+        pitch = np.degrees(pitch)
+
         error = referencia - p.getBaseVelocity(huskyId)[0][1]
 
         actual_time = time.time() - start_time
 
-        # Componente proporcional
-        P = kp * error
+        prev_vel = p.getJointState(huskyId, 2)[1]
 
-        # Componente integral
-        integral += error * actual_time
-        I = ki * integral
 
-        # Componente derivativa
-        derivative = (error - prev_error) / actual_time
-        D = kd * derivative
+        # Bajando
+        if pitch > 3:
+            if prev_vel > vel_max_bajada:
+                vel = prev_vel - ajuste_bajada
+            else:
+                vel = vel_max_bajada
 
-        vel = P + I + D
-        print(vel, error)
+        # Subiendo
+        elif pitch < -3:
+            if prev_vel < vel_max_subida:
+                vel = prev_vel + ajuste_subida
+            else:
+                vel = vel_max_subida
 
+        # Llano
+        else:
+            if prev_vel < vel_max_llano:
+                vel = prev_vel + ajuste_llano
+            else:
+                vel = vel_max_llano
+
+   
         # Actualizar valores anteriores
         prev_error = error
 

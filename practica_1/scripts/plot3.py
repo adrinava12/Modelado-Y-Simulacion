@@ -15,10 +15,10 @@ position_3 = [x[1] for x in fase3_3]
 velocity_3 = [x[2] for x in fase3_3]
 
 plt.plot(position_1, velocity_1)
-plt.plot(position_2, velocity_2)
-plt.plot(position_3, velocity_3)
+plt.plot(position_2, velocity_2, linestyle='--')
+plt.plot(position_3, velocity_3, linestyle='--')
 
-
+plt.grid(True)
 plt.legend(["Escenario 3.1", "Escenario 3.2", "Escenario 3.3"])
 plt.title("Relacion entre velocidad y posicion")
 plt.xlabel("Posicion husky")
