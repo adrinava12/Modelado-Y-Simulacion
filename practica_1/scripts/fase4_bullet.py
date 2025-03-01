@@ -57,36 +57,12 @@ for joint in joints:
 
 # Posicion inicial del husky
 prev_husky_pos, _ = p.getBasePositionAndOrientation(huskyId)
-
-# kp = 28
-# kd = 1
-# ki = 0.001
-
-# kp = 28
-# kd = 1
-# ki = 0.0001
-
-kp_llano = 30.0  # Reducido para evitar oscilaciones grandes
-kd_llano = 1   # Aumentado para amortiguar el sistema
-ki_llano = 0.0035
-
-kp_subiendo = 20  # Reducido para evitar oscilaciones grandes
-kd_subiendo = 10   # Aumentado para amortiguar el sistema
-ki_subiendo = 0.004
-
-kp_bajando = 2.5  # Reducido para evitar oscilaciones grandes
-kd_bajando = 15   # Aumentado para amortiguar el sistema
-ki_bajando = 0.0000005
-
-referencia = 2
-integral = 0
-prev_error = 0
 # Parámetros de velocidad máxima y ajuste
 vel_max_llano = 11.2
-vel_max_subida = 22
-vel_max_bajada = 4
-ajuste_subida = 0.1
-ajuste_bajada = 0.1
+vel_max_subida = 24
+vel_max_bajada = 8
+ajuste_subida = 0.05
+ajuste_bajada = 0.15
 ajuste_llano = 0.09
 try:
     while True:
@@ -97,22 +73,26 @@ try:
 
         pitch = np.degrees(pitch)
 
-        error = referencia - p.getBaseVelocity(huskyId)[0][1]
-
         actual_time = time.time() - start_time
 
         prev_vel = p.getJointState(huskyId, 2)[1]
 
+        # Bajando un poco
+        if 7 > pitch > 2:
+            if prev_vel > vel_max_bajada:
+                vel = prev_vel - 0.07
+            else:
+                vel = vel_max_bajada
 
         # Bajando
-        if pitch > 3:
+        elif pitch > 7:
             if prev_vel > vel_max_bajada:
                 vel = prev_vel - ajuste_bajada
             else:
                 vel = vel_max_bajada
 
         # Subiendo
-        elif pitch < -3:
+        elif pitch < -4:
             if prev_vel < vel_max_subida:
                 vel = prev_vel + ajuste_subida
             else:
@@ -124,10 +104,6 @@ try:
                 vel = prev_vel + ajuste_llano
             else:
                 vel = vel_max_llano
-
-   
-        # Actualizar valores anteriores
-        prev_error = error
 
         p.setJointMotorControlArray(huskyId,
                                 joints,
