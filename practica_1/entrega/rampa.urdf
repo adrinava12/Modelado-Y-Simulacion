@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<robot name="rampa">
+
+<!-- Definición de Material -->
+    <material name="blue">
+        <color rgba="0.0 0.0 1.0 1.0"/>
+    </material>
+
+<!-- Definicion de links -->
+    <link name="upwards_link">
+        <!-- <inertial>
+            <origin xyz="0.0 -11.5 -0.75" rpy="66.437 0.0 0.0"/>
+            <mass value="40.0"/>
+            <inertia ixx="0.38" ixy="0.0" ixz="0.0" iyy="0.075" iyz="0.0" izz="84.0"/>
+        </inertial> -->
+
+        <visual>
+            <origin xyz="0.0 -11.5 -0.75" rpy="66.437 0.0 0.0"/>
+            <geometry>
+                <box size="1.5 3.35 0.0"/>
+            </geometry>
+            <material name="blue"/>
+        </visual>
+
+        <collision>
+            <origin xyz="0.0 -11.5 -0.75" rpy="66.437 0.0 0.0"/>
+            <geometry>
+                <box size="1.5 3.35 0.0"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="base_link">
+        <!-- <inertial>
+            <origin xyz="0.0 0.0 0.75" rpy="0.0 0.0 0.0"/>
+            <mass value="100.0"/>
+            <inertia ixx="0.95" ixy="0.0" ixz="0.0" iyy="0.19" iyz="0.0" izz="210.0"/>
+        </inertial> -->
+
+        <visual>
+            <origin xyz="0.0 0.0 0.75" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="1.5 4.0 1.5"/>
+            </geometry>
+            <material name="blue"/>
+        </visual>
+
+        <collision>
+            <origin xyz="0.0 0.0 0.75" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="1.5 4.0 1.5"/>
+            </geometry> 
+        </collision>
+        
+    </link>
+
+    <link name="downwards_link">
+        <!-- <inertial>
+            <origin xyz="0.0 -8.5 -0.75" rpy="-66.437 0.0 0.0"/>
+            <mass value="40.0"/>
+            <inertia ixx="0.38" ixy="0.0" ixz="0.0" iyy="0.075" iyz="0.0" izz="84.0"/>
+        </inertial> -->
+
+        <visual>
+            <origin xyz="0.0 -8.5 -0.75" rpy="-66.437 0.0 0.0"/>
+            <geometry>
+                <box size="1.5 3.35 0.0"/>
+            </geometry>
+            <material name="blue"/>
+        </visual>
+
+        <collision>
+            <origin xyz="0.0 -8.5 -0.75" rpy="-66.437 0.0 0.0"/>
+            <geometry>
+                <box size="1.5 3.35 0.0"/>
+            </geometry>
+        </collision>
+    </link>
+
+<!-- Definicion de Joints -->
+    <joint name="upward_base_joint" type="fixed">
+        <origin xyz="0.0 8.0 1.5" rpy="0.0 0.0 0.0"/>
+        <parent link="base_link"/>
+        <child link="upwards_link"/>
+    </joint>
+
+    <joint name="downwards_base_joint" type="fixed">
+        <origin xyz="0.0 12.0 1.5" rpy="0.0 0.0 0.0"/>
+        <parent link="base_link"/>
+        <child link="downwards_link"/>
+    </joint>
+    
+</robot>

@@ -1,0 +1,100 @@
+<robot name="brazo_scara" version="1.0">
+  <joint name="Finger1_link_joint" type="prismatic">
+    <limit lower="-0.30000" upper="0.00000" effort="0.00000" velocity="0.00000"/>
+    <origin rpy="-0.00000 1.57080 0.00000" xyz="-0.32000 0.00000 -0.20000"/>
+    <parent link="Seg4_link"/>
+    <child link="Finger1_link"/>
+    <axis xyz="0.00000 0.00000 1.00000"/>
+  </joint>
+  <joint name="Finger2_link_joint" type="prismatic">
+    <limit lower="-0.30000" upper="0.00000" effort="0.00000" velocity="0.00000"/>
+    <origin rpy="0.00000 -1.57080 0.00000" xyz="0.32000 0.00000 -0.20000"/>
+    <parent link="Seg4_link"/>
+    <child link="Finger2_link"/>
+    <axis xyz="0.00000 0.00000 1.00000"/>
+  </joint>
+  <joint name="Seg1_link_joint" type="revolute">
+    <limit lower="-3.00000" upper="3.00000" effort="0.00000" velocity="0.00000"/>
+    <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 -0.00000 1.26129"/>
+    <parent link="Base_link"/>
+    <child link="Seg1_link"/>
+    <axis xyz="0.00000 0.00000 1.00000"/>
+  </joint>
+  <joint name="Seg2_link_joint" type="revolute">
+    <limit lower="-0.78540" upper="3.92239" effort="0.00000" velocity="0.00000"/>
+    <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 1.50000 -0.17250"/>
+    <parent link="Seg1_link"/>
+    <child link="Seg2_link"/>
+    <axis xyz="0.00000 0.00000 1.00000"/>
+  </joint>
+  <joint name="Seg3_link_joint" type="prismatic">
+    <limit lower="-3.25000" upper="0.25000" effort="0.00000" velocity="0.00000"/>
+    <origin rpy="0.00000 0.00000 0.00000" xyz="1.80000 0.00000 1.57250"/>
+    <parent link="Seg2_link"/>
+    <child link="Seg3_link"/>
+    <axis xyz="0.00000 0.00000 1.00000"/>
+  </joint>
+  <joint name="Seg4_link_joint" type="revolute">
+    <limit lower="-2.90000" upper="2.90000" effort="0.00000" velocity="0.00000"/>
+    <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 -2.00000"/>
+    <parent link="Seg3_link"/>
+    <child link="Seg4_link"/>
+    <axis xyz="0.00000 0.00000 1.00000"/>
+  </joint>
+  <link name="Base_link">
+    <visual name="Base">
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 -0.00000 -0.00000"/>
+      <geometry>
+        <mesh filename="../meshes/stl/Cilindro.stl" scale="0.50000 0.50000 0.06000"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="Finger1_link">
+    <visual name="Finger2">
+      <origin rpy="0.00000 -1.57080 0.00000" xyz="-0.00000 0.00000 0.64000"/>
+      <geometry>
+        <mesh filename="../meshes/stl/Cubo.004.stl" scale="0.02500 0.35000 0.17500"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="Finger2_link">
+    <visual name="Finger1">
+      <origin rpy="-0.00000 1.57080 0.00000" xyz="0.00000 0.00000 0.64000"/>
+      <geometry>
+        <mesh filename="../meshes/stl/Cubo.003.stl" scale="0.02500 0.35000 0.17500"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="Seg1_link">
+    <visual name="Link1">
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.75263 0.00000"/>
+      <geometry>
+        <mesh filename="../meshes/stl/Cilindro.004.stl" scale="0.40000 0.25263 0.10000"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="Seg2_link">
+    <visual name="Link2">
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.79998 0.00000 0.00000"/>
+      <geometry>
+        <mesh filename="../meshes/stl/Cilindro.006.stl" scale="0.27692 0.30000 0.10000"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="Seg3_link">
+    <visual name="Link3">
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
+      <geometry>
+        <mesh filename="../meshes/stl/Cilindro.007.stl" scale="0.20000 0.20000 2.00000"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="Seg4_link">
+    <visual name="Link4">
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
+      <geometry>
+        <mesh filename="../meshes/stl/Cubo.002.stl" scale="0.35000 0.35000 0.02500"/>
+      </geometry>
+    </visual>
+  </link>
+</robot>
