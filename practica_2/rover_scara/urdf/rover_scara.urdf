@@ -14,7 +14,7 @@
     <axis xyz="0.00000 0.00000 1.00000"/>
   </joint>
   <joint name="Seg1_link_joint" type="revolute">
-    <limit lower="-3.00000" upper="3.00000" effort="0.00000" velocity="0.00000"/>
+    <limit lower="-6.00000" upper="6.00000" effort="0.00000" velocity="0.00000"/>
     <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.02000 1.60000"/>
     <parent link="base_brazo_link"/>
     <child link="Seg1_link"/>
