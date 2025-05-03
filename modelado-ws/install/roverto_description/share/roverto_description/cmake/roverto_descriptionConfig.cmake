@@ -1,0 +1,1 @@
+/home/adrian/Escritorio/modelado/modelado-ws/build/roverto_description/ament_cmake_core/roverto_descriptionConfig.cmake

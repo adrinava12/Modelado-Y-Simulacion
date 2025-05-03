@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<!-- created with Phobos 1.0.1 "Capricious Choutengan" -->
+<robot name="scara" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="scara" params="parent">
+
+      <!-- Joints -->
+    <joint name="base_brazo_link_joint" type="fixed">
+      <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 -0.62045 0.90296"/>
+      <parent link="${parent}"/>
+      <child link="base_brazo_link"/>
+    </joint>
+
+    <joint name="Seg1_link_joint" type="revolute">
+      <limit lower="-3.00000" upper="3.00000" effort="0.00000" velocity="0.00000"/>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.02000 1.60000"/>
+      <parent link="base_brazo_link"/>
+      <child link="Seg1_link"/>
+      <axis xyz="0.00000 0.00000 1.00000"/>
+    </joint>
+
+    <joint name="Seg2_link_joint" type="revolute">
+      <limit lower="-0.70000" upper="4.00000" effort="0.00000" velocity="0.00000"/>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 1.48000 -0.17250"/>
+      <parent link="Seg1_link"/>
+      <child link="Seg2_link"/>
+      <axis xyz="0.00000 0.00000 1.00000"/>
+    </joint>
+
+    <joint name="Seg3_link_joint" type="prismatic">
+      <limit lower="-2.50000" upper="0.00000" effort="0.00000" velocity="0.00000"/>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="1.80000 -0.00000 1.17250"/>
+      <parent link="Seg2_link"/>
+      <child link="Seg3_link"/>
+      <axis xyz="0.00000 0.00000 1.00000"/>
+    </joint>
+
+    <joint name="Seg4_link_joint" type="continuous">
+      <limit lower="0" upper="0" effort="0.00000" velocity="0.00000"/>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 -0.00000 -1.60000"/>
+      <parent link="Seg3_link"/>
+      <child link="Seg4_link"/>
+      <axis xyz="0.00000 0.00000 1.00000"/>
+    </joint>
+
+
+      <!-- Links del brazo scara -->
+      <link name="Seg1_link">
+      <collision name="Seg1_collision">
+        <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 0.73263 0.00000"/>
+        <geometry>
+          <mesh filename="file://$(find roverto_description)/dae/Cilindro.008.dae" scale="0.40000 0.25263 0.10000"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <inertia ixx="1.34348" ixy="0.00000" ixz="-0.00000" iyy="0.14027" iyz="0.00000" izz="1.46554"/>
+        <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 0.73263 0.00000"/>
+        <mass value="3.00000"/>
+      </inertial>
+      <visual name="Seg1">
+        <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.73263 0.00000"/>
+        <geometry>
+          <mesh filename="file://$(find roverto_description)/dae/Cilindro.008.dae" scale="0.40000 0.25263 0.10000"/>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="Seg2_link">
+      <collision name="Seg2_collision">
+        <origin rpy="0.00000 0.00000 0.00000" xyz="0.79998 0.00000 0.00000"/>
+        <geometry>
+          <mesh filename="file://$(find roverto_description)/dae/Cilindro.009.dae" scale="0.27692 0.30000 0.10000"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <inertia ixx="0.09499" ixy="0.00000" ixz="0.05946" iyy="1.42088" iyz="0.00000" izz="1.46646"/>
+        <origin rpy="0.00000 0.00000 0.00000" xyz="0.82302 0.00000 0.00061"/>
+        <mass value="3.00000"/>
+      </inertial>
+      <visual name="Seg2">
+        <origin rpy="0.00000 0.00000 0.00000" xyz="0.79998 0.00000 0.00000"/>
+        <geometry>
+          <mesh filename="file://$(find roverto_description)/dae/Cilindro.009.dae" scale="0.27692 0.30000 0.10000"/>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="Seg3_link">
+      <collision name="Seg3_collision">
+        <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
+        <geometry>
+          <mesh filename="file://$(find roverto_description)/dae/Cilindro.007.dae" scale="0.20000 0.20000 1.60000"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <inertia ixx="1.72654" ixy="-0.00000" ixz="0.00000" iyy="1.72654" iyz="0.00000" izz="0.03974"/>
+        <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 -0.00000 -0.00000"/>
+        <mass value="2.00000"/>
+      </inertial>
+      <visual name="Seg3">
+        <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 -0.00000"/>
+        <geometry>
+          <mesh filename="file://$(find roverto_description)/dae/Cilindro.007.dae" scale="0.20000 0.20000 1.60000"/>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="Seg4_link">
+      <collision name="Seg4_collision">
+        <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
+        <geometry>
+          <mesh filename="file://$(find roverto_description)/dae/Cubo.012.dae" scale="0.35000 0.35000 0.02500"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <inertia ixx="0.04104" ixy="0.00000" ixz="0.00000" iyy="0.04104" iyz="0.00000" izz="0.08167"/>
+        <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
+        <mass value="1.00000"/>
+      </inertial>
+      <visual name="Seg4">
+        <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
+        <geometry>
+          <mesh filename="file://$(find roverto_description)/dae/Cubo.012.dae" scale="0.35000 0.35000 0.02500"/>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- Link Base scara -->
+    <link name="base_brazo_link">
+      <collision name="base_brazo_collision">
+        <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
+        <geometry>
+          <mesh filename="file://$(find roverto_description)/dae/Cilindro.006.dae" scale="0.45000 0.45000 0.07826"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <inertia ixx="8.14387" ixy="0.00000" ixz="0.00000" iyy="8.14387" iyz="0.00000" izz="0.62637"/>
+        <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 -0.00000 0.00000"/>
+        <mass value="10.00000"/>
+      </inertial>
+      <visual name="base_brazo">
+        <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 -0.00000"/>
+        <geometry>
+          <mesh filename="file://$(find roverto_description)/dae/Cilindro.006.dae" scale="0.45000 0.45000 0.07826"/>
+        </geometry>
+      </visual>
+    </link>
+
+  </xacro:macro>
+</robot>

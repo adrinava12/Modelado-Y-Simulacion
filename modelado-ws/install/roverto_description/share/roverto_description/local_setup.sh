@@ -1,0 +1,1 @@
+/home/adrian/Escritorio/modelado/modelado-ws/build/roverto_description/ament_cmake_environment_hooks/local_setup.sh

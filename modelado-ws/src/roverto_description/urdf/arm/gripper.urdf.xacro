@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!-- created with Phobos 1.0.1 "Capricious Choutengan" -->
+<robot name="gripper" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="finger" params="prefix parent xyz rpy">
+
+    <joint name="${prefix}_joint" type="prismatic">
+      <limit lower="0.00000" upper="0.25000" effort="0.00000" velocity="0.00000"/>
+      <origin rpy="${rpy}" xyz="${xyz}"/>
+      <parent link="Seg4_link"/>
+      <child link="${prefix}_link"/>
+      <axis xyz="0.00000 0.00000 1.00000"/>
+    </joint>
+
+    <link name="${prefix}_link">
+      <collision name="${prefix}_collision">
+        <origin rpy="-0.00000 1.57080 0.00000" xyz="0.00000 0.00000 -0.00000"/>
+        <geometry>
+          <mesh filename="file://$(find roverto_description)/dae/Cubo.014.dae" scale="0.02500 0.35000 0.17500"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <inertia ixx="0.05104" ixy="0.00000" ixz="0.00000" iyy="0.01042" iyz="0.00000" izz="0.04104"/>
+        <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 0.00000 -0.00000"/>
+        <mass value="1.00000"/>
+      </inertial>
+      <visual name="${prefix}">
+        <origin rpy="-0.00000 1.57080 0.00000" xyz="0.00000 0.00000 -0.00000"/>
+        <geometry>
+          <mesh filename="file://$(find roverto_description)/dae/Cubo.014.dae" scale="0.02500 0.35000 0.17500"/>
+        </geometry>
+      </visual>
+    </link>
+  </xacro:macro>
+
+  <xacro:macro name="fingers" params="parent">
+    <!-- Dos dedos -->
+    <xacro:finger prefix="Finger1" parent="${parent}" xyz="-0.32 0.0 -0.2" rpy="-0.0 1.5708 0.0"/>
+    <xacro:finger prefix="Finger2" parent="${parent}" xyz="0.32 0.0 -0.2" rpy="0.0 -1.5708 0.0"/>
+  </xacro:macro>
+</robot>

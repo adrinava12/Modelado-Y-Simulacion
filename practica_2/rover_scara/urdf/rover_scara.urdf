@@ -1,4 +1,6 @@
 <robot name="rover_scara" version="1.0">
+
+<!-- Joints -->
   <joint name="Finger1_link_joint" type="prismatic">
     <limit lower="0.00000" upper="0.25000" effort="0.00000" velocity="0.00000"/>
     <origin rpy="-0.00000 1.57080 0.00000" xyz="-0.32000 0.00000 -0.20000"/>
@@ -6,6 +8,7 @@
     <child link="Finger1_link"/>
     <axis xyz="0.00000 0.00000 1.00000"/>
   </joint>
+
   <joint name="Finger2_link_joint" type="prismatic">
     <limit lower="0.00000" upper="0.25000" effort="0.00000" velocity="0.00000"/>
     <origin rpy="0.00000 -1.57080 0.00000" xyz="0.32000 0.00000 -0.20000"/>
@@ -13,6 +16,7 @@
     <child link="Finger2_link"/>
     <axis xyz="0.00000 0.00000 1.00000"/>
   </joint>
+
   <joint name="Seg1_link_joint" type="revolute">
     <limit lower="-3.00000" upper="3.00000" effort="0.00000" velocity="0.00000"/>
     <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.02000 1.60000"/>
@@ -20,6 +24,7 @@
     <child link="Seg1_link"/>
     <axis xyz="0.00000 0.00000 1.00000"/>
   </joint>
+
   <joint name="Seg2_link_joint" type="revolute">
     <limit lower="-0.70000" upper="4.00000" effort="0.00000" velocity="0.00000"/>
     <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 1.48000 -0.17250"/>
@@ -27,6 +32,7 @@
     <child link="Seg2_link"/>
     <axis xyz="0.00000 0.00000 1.00000"/>
   </joint>
+
   <joint name="Seg3_link_joint" type="prismatic">
     <limit lower="-2.50000" upper="0.00000" effort="0.00000" velocity="0.00000"/>
     <origin rpy="0.00000 0.00000 0.00000" xyz="1.80000 -0.00000 1.17250"/>
@@ -34,6 +40,7 @@
     <child link="Seg3_link"/>
     <axis xyz="0.00000 0.00000 1.00000"/>
   </joint>
+
   <joint name="Seg4_link_joint" type="continuous">
     <limit lower="0" upper="0" effort="0.00000" velocity="0.00000"/>
     <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 -0.00000 -1.60000"/>
@@ -41,11 +48,14 @@
     <child link="Seg4_link"/>
     <axis xyz="0.00000 0.00000 1.00000"/>
   </joint>
+
   <joint name="base_brazo_link_joint" type="fixed">
     <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 -0.62045 0.90296"/>
     <parent link="Base_link"/>
     <child link="base_brazo_link"/>
   </joint>
+
+  <!-- WHEELS -->
   <joint name="left_back_link_joint" type="continuous">
     <limit lower="0" upper="0" effort="0.00000" velocity="0.00000"/>
     <origin rpy="-0.00000 1.57080 0.00000" xyz="0.95000 1.49955 -0.54704"/>
@@ -53,6 +63,7 @@
     <child link="left_back_link"/>
     <axis xyz="0.00000 0.00000 1.00000"/>
   </joint>
+
   <joint name="left_front_link_joint" type="continuous">
     <limit lower="0" upper="0" effort="0.00000" velocity="0.00000"/>
     <origin rpy="0.00000 1.57080 0.00000" xyz="0.97000 -1.20045 -0.54704"/>
@@ -60,6 +71,7 @@
     <child link="left_front_link"/>
     <axis xyz="0.00000 0.00000 1.00000"/>
   </joint>
+
   <joint name="left_mid_link_joint" type="continuous">
     <limit lower="0" upper="0" effort="0.00000" velocity="0.00000"/>
     <origin rpy="-0.00000 1.57080 0.00000" xyz="0.95000 0.29955 -0.54704"/>
@@ -67,6 +79,7 @@
     <child link="left_mid_link"/>
     <axis xyz="0.00000 0.00000 1.00000"/>
   </joint>
+
   <joint name="right_back_link_joint" type="continuous">
     <limit lower="0" upper="0" effort="0.00000" velocity="0.00000"/>
     <origin rpy="0.00000 1.57080 0.00000" xyz="-0.95000 1.49955 -0.54704"/>
@@ -74,6 +87,7 @@
     <child link="right_back_link"/>
     <axis xyz="0.00000 0.00000 1.00000"/>
   </joint>
+
   <joint name="right_front_link_joint" type="continuous">
     <limit lower="0" upper="0" effort="0.00000" velocity="0.00000"/>
     <origin rpy="0.00000 1.57080 0.00000" xyz="-0.95000 -1.20045 -0.54704"/>
@@ -81,6 +95,7 @@
     <child link="right_front_link"/>
     <axis xyz="0.00000 0.00000 1.00000"/>
   </joint>
+
   <joint name="right_mid_link_joint" type="continuous">
     <limit lower="0" upper="0" effort="0.00000" velocity="0.00000"/>
     <origin rpy="-0.00000 1.57080 0.00000" xyz="-0.95000 0.29955 -0.54704"/>
@@ -88,6 +103,8 @@
     <child link="right_mid_link"/>
     <axis xyz="0.00000 0.00000 1.00000"/>
   </joint>
+
+  <!-- LINKS -->
   <link name="Base_link">
     <collision name="Base_collision">
       <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 -0.00000 -0.00000"/>
@@ -107,6 +124,7 @@
       </geometry>
     </visual>
   </link>
+
   <link name="Finger1_link">
     <collision name="Finger1_collision">
       <origin rpy="0.00000 -1.57080 0.00000" xyz="-0.00000 0.00000 0.00000"/>
@@ -126,6 +144,7 @@
       </geometry>
     </visual>
   </link>
+
   <link name="Finger2_link">
     <collision name="Finger2_collision">
       <origin rpy="-0.00000 1.57080 0.00000" xyz="0.00000 0.00000 -0.00000"/>
@@ -145,6 +164,7 @@
       </geometry>
     </visual>
   </link>
+
   <link name="Seg1_link">
     <collision name="Seg1_collision">
       <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 0.73263 0.00000"/>
@@ -164,6 +184,7 @@
       </geometry>
     </visual>
   </link>
+
   <link name="Seg2_link">
     <collision name="Seg2_collision">
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.79998 0.00000 0.00000"/>
@@ -183,6 +204,7 @@
       </geometry>
     </visual>
   </link>
+
   <link name="Seg3_link">
     <collision name="Seg3_collision">
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
@@ -202,6 +224,7 @@
       </geometry>
     </visual>
   </link>
+
   <link name="Seg4_link">
     <collision name="Seg4_collision">
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
@@ -221,6 +244,7 @@
       </geometry>
     </visual>
   </link>
+
   <link name="base_brazo_link">
     <collision name="base_brazo_collision">
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
@@ -240,6 +264,9 @@
       </geometry>
     </visual>
   </link>
+
+
+  <!-- RUEDAS -->
   <link name="left_back_link">
     <collision name="left_back_collision">
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 -0.05000 -0.00000"/>
@@ -259,6 +286,7 @@
       </geometry>
     </visual>
   </link>
+
   <link name="left_front_link">
     <collision name="left_front_collision">
       <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 0.00000 0.00000"/>
@@ -278,6 +306,7 @@
       </geometry>
     </visual>
   </link>
+
   <link name="left_mid_link">
     <collision name="left_mid_collision">
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 -0.00000 -0.00000"/>
@@ -297,6 +326,7 @@
       </geometry>
     </visual>
   </link>
+
   <link name="right_back_link">
     <collision name="right_back_collision">
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 -0.00000 0.00000"/>
@@ -316,6 +346,7 @@
       </geometry>
     </visual>
   </link>
+
   <link name="right_front_link">
     <collision name="right_front_collision">
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
@@ -335,6 +366,7 @@
       </geometry>
     </visual>
   </link>
+
   <link name="right_mid_link">
     <collision name="right_mid_collision">
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>

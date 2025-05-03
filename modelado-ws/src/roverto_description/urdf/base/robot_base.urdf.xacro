@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!-- created with Phobos 1.0.1 "Capricious Choutengan" -->
+<robot name="base" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="base" params="parent">
+    <!-- LINKS -->
+    <link name="base_footprint">
+    </link>
+
+    <link name="base_link">
+      <collision name="Base_collision">
+        <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 -0.00000 -0.00000"/>
+        <geometry>
+          <mesh filename="file://$(find roverto_description)/dae/Cubo.dae" scale="0.75000 1.90000 0.07500"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <inertia ixx="178.93889" ixy="-0.00000" ixz="-0.00000" iyy="51.49117" iyz="-22.08723" izz="189.25988"/>
+        <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 -0.00000 -0.00000"/>
+        <mass value="150.00000"/>
+      </inertial>
+      <visual name="Base">
+        <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 -0.00000 -0.00000"/>
+        <geometry>
+          <mesh filename="file://$(find roverto_description)/dae/Cubo.dae" scale="0.75000 1.90000 0.07500"/>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- Joints -->
+    <joint name="base_footprint_joint" type="fixed">
+      <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 -0.0 0.0"/>
+      <parent link="${parent}"/>
+      <child link="base_link"/>
+    </joint>
+
+  </xacro:macro>
+</robot>
