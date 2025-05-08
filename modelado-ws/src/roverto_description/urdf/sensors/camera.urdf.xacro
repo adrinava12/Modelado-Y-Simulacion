@@ -3,8 +3,6 @@
 <robot name="base_camera" xmlns:xacro="http://www.ros.org/wiki/xacro">
     <xacro:macro name="base_camera" params="prefix parent xyz rpy">
 
-<!-- CORREGIR ROTACION JOINTS -->
-
     <!-- Joints -->
     <joint name="${prefix}_camera_joint" type="fixed">
       <origin rpy="0.00000 0.00000 0.00000" xyz="${xyz}"/>
@@ -37,6 +35,32 @@
     <link name="${prefix}_camera_frame"/>
 
     <link name="${prefix}_camera_optical_frame"/>
+
+    <gazebo reference="${prefix}_camera_frame">
+      <sensor name="${prefix}_sensor" type="camera">
+        <visualize>true</visualize>
+        <update_rate>30</update_rate>
+        <topic>/${prefix}/image</topic>
+        <camera>
+          <horizontal_fov>${radians(float(80))}</horizontal_fov>
+          <image>
+            <width>1280</width>
+            <height>720</height>
+            <format>R8G8B8</format>
+          </image>
+          <clip>
+            <near>0.10</near>
+            <far>15.0</far>
+          </clip>
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.007</stddev>
+          </noise>
+          <optical_frame_id>${prefix}_camera_frame</optical_frame_id>
+        </camera>
+      </sensor>
+    </gazebo>
 
     </xacro:macro>
 </robot>

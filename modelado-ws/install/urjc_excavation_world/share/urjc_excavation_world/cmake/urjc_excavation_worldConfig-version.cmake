@@ -1,0 +1,1 @@
+/home/adrian/Escritorio/modelado/modelado-ws/build/urjc_excavation_world/ament_cmake_core/urjc_excavation_worldConfig-version.cmake

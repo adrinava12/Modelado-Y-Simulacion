@@ -11,7 +11,7 @@
     </joint>
 
     <joint name="Seg1_link_joint" type="revolute">
-      <limit lower="-3.00000" upper="3.00000" effort="0.00000" velocity="0.00000"/>
+      <limit lower="-3.00000" upper="3.00000" effort="1000.0" velocity="100.0"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.02000 1.60000"/>
       <parent link="base_brazo_link"/>
       <child link="Seg1_link"/>
@@ -19,7 +19,7 @@
     </joint>
 
     <joint name="Seg2_link_joint" type="revolute">
-      <limit lower="-0.70000" upper="4.00000" effort="0.00000" velocity="0.00000"/>
+      <limit lower="-0.70000" upper="4.00000" effort="1000.0" velocity="100.0"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 1.48000 -0.17250"/>
       <parent link="Seg1_link"/>
       <child link="Seg2_link"/>
@@ -27,7 +27,7 @@
     </joint>
 
     <joint name="Seg3_link_joint" type="prismatic">
-      <limit lower="-2.50000" upper="0.00000" effort="0.00000" velocity="0.00000"/>
+      <limit lower="-2.50000" upper="0.00000" effort="1000.0" velocity="100.0"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="1.80000 -0.00000 1.17250"/>
       <parent link="Seg2_link"/>
       <child link="Seg3_link"/>
@@ -35,7 +35,7 @@
     </joint>
 
     <joint name="Seg4_link_joint" type="continuous">
-      <limit lower="0" upper="0" effort="0.00000" velocity="0.00000"/>
+      <limit lower="0" upper="0" effort="1000.0" velocity="100.0"/>
       <origin rpy="0.00000 0.00000 0.00000" xyz="-0.00000 -0.00000 -1.60000"/>
       <parent link="Seg3_link"/>
       <child link="Seg4_link"/>

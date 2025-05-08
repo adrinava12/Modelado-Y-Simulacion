@@ -1,0 +1,9 @@
+# Default initial positions for roverto's ros2_control fake system
+
+initial_positions:
+  Finger1_joint: 0
+  Finger2_joint: 0
+  Seg1_link_joint: 0
+  Seg2_link_joint: 0
+  Seg3_link_joint: 0
+  Seg4_link_joint: 0

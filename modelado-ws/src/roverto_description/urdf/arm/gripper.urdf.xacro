@@ -5,7 +5,7 @@
   <xacro:macro name="finger" params="prefix parent xyz rpy">
 
     <joint name="${prefix}_joint" type="prismatic">
-      <limit lower="0.00000" upper="0.25000" effort="0.00000" velocity="0.00000"/>
+      <limit lower="0.00000" upper="0.25000" effort="1000" velocity="100.0"/>
       <origin rpy="${rpy}" xyz="${xyz}"/>
       <parent link="Seg4_link"/>
       <child link="${prefix}_link"/>
