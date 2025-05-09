@@ -1,0 +1,85 @@
+[0.007s] Invoking command in '/home/adrian/Escritorio/modelado/modelado-ws/build/urjc_excavation_world': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/adrian/Escritorio/vision/vision-ws/install/yolo_ros:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/adrian/Escritorio/modelado/modelado-ws/src/urjc-excavation-world -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world
+[0.126s] -- The C compiler identification is GNU 13.3.0
+[0.214s] -- The CXX compiler identification is GNU 13.3.0
+[0.228s] -- Detecting C compiler ABI info
+[0.302s] -- Detecting C compiler ABI info - done
+[0.308s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.308s] -- Detecting C compile features
+[0.308s] -- Detecting C compile features - done
+[0.315s] -- Detecting CXX compiler ABI info
+[0.383s] -- Detecting CXX compiler ABI info - done
+[0.388s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.388s] -- Detecting CXX compile features
+[0.389s] -- Detecting CXX compile features - done
+[0.395s] -- Found ros_gz_sim: 1.0.11 (/opt/ros/jazzy/share/ros_gz_sim/cmake)
+[0.506s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.559s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.645s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.659s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.677s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.694s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.767s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.770s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.852s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[0.868s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[0.887s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.956s] -- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[1.028s] -- Configuring done (1.0s)
+[1.030s] -- Generating done (0.0s)
+[1.031s] -- Build files have been written to: /home/adrian/Escritorio/modelado/modelado-ws/build/urjc_excavation_world
+[1.038s] Invoked command in '/home/adrian/Escritorio/modelado/modelado-ws/build/urjc_excavation_world' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/adrian/Escritorio/vision/vision-ws/install/yolo_ros:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/adrian/Escritorio/modelado/modelado-ws/src/urjc-excavation-world -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world
+[1.039s] Invoking command in '/home/adrian/Escritorio/modelado/modelado-ws/build/urjc_excavation_world': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/adrian/Escritorio/vision/vision-ws/install/yolo_ros:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/adrian/Escritorio/modelado/modelado-ws/build/urjc_excavation_world -- -j16 -l16
+[1.066s] Invoked command in '/home/adrian/Escritorio/modelado/modelado-ws/build/urjc_excavation_world' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/adrian/Escritorio/vision/vision-ws/install/yolo_ros:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/adrian/Escritorio/modelado/modelado-ws/build/urjc_excavation_world -- -j16 -l16
+[1.067s] Invoking command in '/home/adrian/Escritorio/modelado/modelado-ws/build/urjc_excavation_world': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/adrian/Escritorio/vision/vision-ws/install/yolo_ros:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/adrian/Escritorio/modelado/modelado-ws/build/urjc_excavation_world
+[1.072s] -- Install configuration: ""
+[1.073s] -- Execute custom install script
+[1.073s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/launch/urjc_excavation.launch.py
+[1.078s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/launch/urjc_excavation_msr.launch.py
+[1.083s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/launch/view_urjc_excavation.launch.py
+[1.088s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/models/blue_cube/meshes/blue_cube.dae
+[1.093s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/models/blue_cube/model.config
+[1.100s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/models/blue_cube/model.sdf
+[1.106s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/models/green_cube/meshes/green_cube.dae
+[1.111s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/models/green_cube/model.config
+[1.118s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/models/green_cube/model.sdf
+[1.126s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/models/red_cube/meshes/red_cube.dae
+[1.133s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/models/red_cube/model.config
+[1.140s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/models/red_cube/model.sdf
+[1.145s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/models/urjc_excavation/meshes/Image_0.047.jpg
+[1.151s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/models/urjc_excavation/meshes/Image_0.049.jpg
+[1.157s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/models/urjc_excavation/meshes/Image_0.051.jpg
+[1.162s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/models/urjc_excavation/meshes/Image_0.054.jpg
+[1.169s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/models/urjc_excavation/meshes/Image_0.055.jpg
+[1.175s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/models/urjc_excavation/meshes/Image_0.056.jpg
+[1.181s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/models/urjc_excavation/meshes/Image_0.057.jpg
+[1.186s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/models/urjc_excavation/meshes/Image_0.058.jpg
+[1.191s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/models/urjc_excavation/meshes/Image_0.059.jpg
+[1.198s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/models/urjc_excavation/meshes/Image_0.060.jpg
+[1.204s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/models/urjc_excavation/meshes/Image_0.061.jpg
+[1.209s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/models/urjc_excavation/meshes/Image_0.064.jpg
+[1.214s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/models/urjc_excavation/meshes/Image_1.014.jpg
+[1.222s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/models/urjc_excavation/meshes/Image_1.016.jpg
+[1.228s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/models/urjc_excavation/meshes/URJC_excavation.dae
+[1.233s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/models/urjc_excavation/meshes/URJC_excavation.stl
+[1.237s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/models/urjc_excavation/model.config
+[1.245s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/models/urjc_excavation/model.sdf
+[1.250s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/worlds/urjc_excavation.world
+[1.257s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/worlds/urjc_excavation_msr.world
+[1.262s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/environment/urjc_excavation_world.dsv
+[1.268s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/ament_index/resource_index/package_run_dependencies/urjc_excavation_world
+[1.274s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/ament_index/resource_index/parent_prefix_path/urjc_excavation_world
+[1.279s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/environment/ament_prefix_path.sh
+[1.285s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/environment/ament_prefix_path.dsv
+[1.290s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/environment/path.sh
+[1.298s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/environment/path.dsv
+[1.304s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/local_setup.bash
+[1.310s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/local_setup.sh
+[1.317s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/local_setup.zsh
+[1.322s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/local_setup.dsv
+[1.328s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/package.dsv
+[1.334s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/ament_index/resource_index/packages/urjc_excavation_world
+[1.339s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.345s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/cmake/urjc_excavation_worldConfig.cmake
+[1.352s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/cmake/urjc_excavation_worldConfig-version.cmake
+[1.357s] -- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/urjc_excavation_world/share/urjc_excavation_world/package.xml
+[1.364s] Invoked command in '/home/adrian/Escritorio/modelado/modelado-ws/build/urjc_excavation_world' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/adrian/Escritorio/vision/vision-ws/install/yolo_ros:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/adrian/Escritorio/modelado/modelado-ws/build/urjc_excavation_world

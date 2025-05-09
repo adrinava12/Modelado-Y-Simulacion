@@ -18,7 +18,7 @@ def generate_launch_description():
     robot_description_content = Command([
             PathJoinSubstitution([FindExecutable(name="xacro")]),
             " ",
-            PathJoinSubstitution([FindPackageShare("roverto_description"), "robots", description_file]),
+            PathJoinSubstitution([FindPackageShare("roverto_moveit_config"), "config", description_file]),
     ])
 
     robot_description_param = launch_ros.descriptions.ParameterValue(robot_description_content, value_type=str)

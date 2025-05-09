@@ -1,0 +1,80 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+-- Configuring done (0.7s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/adrian/Escritorio/modelado/modelado-ws/build/roverto_description
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//config/rover_bridge.yaml
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//config/rover_controllers.yaml
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//launch/robot_check.launch.py
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//launch/robot_controllers.launch.py
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//launch/robot_gazebo.launch.py
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//launch/robot_state_publisher.launch.py
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//robots/roverto.urdf.xacro
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//rviz/default.rviz
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//urdf/arm/gripper.urdf.xacro
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//urdf/arm/scara.urdf.xacro
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//urdf/base/robot_base.urdf.xacro
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//urdf/ros2_control.urdf.xacro
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//urdf/sensors/camera.urdf.xacro
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//urdf/sensors/imu_sensor.urdf.xacro
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//urdf/wheels/roverTo_wheel.urdf.xacro
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//dae/Base.dae
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//dae/Cilindro.001.dae
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//dae/Cilindro.001.dae_history.log
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//dae/Cilindro.002.dae
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//dae/Cilindro.002.dae_history.log
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//dae/Cilindro.004.dae
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//dae/Cilindro.004.dae_history.log
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//dae/Cilindro.005.dae
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//dae/Cilindro.005.dae_history.log
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//dae/Cilindro.006.dae
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//dae/Cilindro.006.dae_history.log
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//dae/Cilindro.007.dae
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//dae/Cilindro.007.dae_history.log
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//dae/Cilindro.008.dae
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//dae/Cilindro.008.dae_history.log
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//dae/Cilindro.009.dae
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//dae/Cilindro.009.dae_history.log
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//dae/Cilindro.dae
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//dae/Cilindro.dae_history.log
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//dae/Cubo.012.dae
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//dae/Cubo.012.dae_history.log
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//dae/Cubo.013.dae
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//dae/Cubo.013.dae_history.log
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//dae/Cubo.014.dae
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//dae/Cubo.014.dae_history.log
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//dae/Cubo.dae
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//dae/Cubo.dae_history.log
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//dae/Rosca.004.dae
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description//dae/Rosca.004.dae_history.log
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/ament_index/resource_index/package_run_dependencies/roverto_description
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/ament_index/resource_index/parent_prefix_path/roverto_description
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description/environment/ament_prefix_path.sh
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description/environment/ament_prefix_path.dsv
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description/environment/path.sh
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description/environment/path.dsv
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description/local_setup.bash
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description/local_setup.sh
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description/local_setup.zsh
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description/local_setup.dsv
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description/package.dsv
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/ament_index/resource_index/packages/roverto_description
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description/cmake/roverto_descriptionConfig.cmake
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description/cmake/roverto_descriptionConfig-version.cmake
+-- Symlinking: /home/adrian/Escritorio/modelado/modelado-ws/install/roverto_description/share/roverto_description/package.xml
