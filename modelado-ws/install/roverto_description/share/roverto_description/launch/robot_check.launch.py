@@ -1,1 +1,0 @@
-/home/adrian/Escritorio/modelado/modelado-ws/src/roverto_description/launch/robot_check.launch.py

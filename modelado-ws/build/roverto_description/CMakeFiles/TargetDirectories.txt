@@ -1,9 +1,0 @@
-/home/adrian/Escritorio/modelado/modelado-ws/build/roverto_description/CMakeFiles/uninstall.dir
-/home/adrian/Escritorio/modelado/modelado-ws/build/roverto_description/CMakeFiles/roverto_description_uninstall.dir
-/home/adrian/Escritorio/modelado/modelado-ws/build/roverto_description/CMakeFiles/test.dir
-/home/adrian/Escritorio/modelado/modelado-ws/build/roverto_description/CMakeFiles/edit_cache.dir
-/home/adrian/Escritorio/modelado/modelado-ws/build/roverto_description/CMakeFiles/rebuild_cache.dir
-/home/adrian/Escritorio/modelado/modelado-ws/build/roverto_description/CMakeFiles/list_install_components.dir
-/home/adrian/Escritorio/modelado/modelado-ws/build/roverto_description/CMakeFiles/install.dir
-/home/adrian/Escritorio/modelado/modelado-ws/build/roverto_description/CMakeFiles/install/local.dir
-/home/adrian/Escritorio/modelado/modelado-ws/build/roverto_description/CMakeFiles/install/strip.dir

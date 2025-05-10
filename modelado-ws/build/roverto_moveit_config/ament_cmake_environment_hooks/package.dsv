@@ -1,4 +1,0 @@
-source;share/roverto_moveit_config/local_setup.bash
-source;share/roverto_moveit_config/local_setup.dsv
-source;share/roverto_moveit_config/local_setup.sh
-source;share/roverto_moveit_config/local_setup.zsh

@@ -1,1 +1,0 @@
-/home/adrian/Escritorio/modelado/modelado-ws/build/urjc_excavation_world/ament_cmake_environment_hooks/local_setup.sh

@@ -1,1 +1,0 @@
-/home/adrian/Escritorio/modelado/modelado-ws/src/roverto_moveit_config/launch/warehouse_db.launch.py

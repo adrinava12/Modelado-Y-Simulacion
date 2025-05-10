@@ -1,1 +1,0 @@
-/home/adrian/Escritorio/modelado/modelado-ws/src/roverto_moveit_config/launch/static_virtual_joint_tfs.launch.py

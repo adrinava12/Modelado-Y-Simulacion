@@ -1,1 +1,0 @@
-/home/adrian/Escritorio/modelado/modelado-ws/src/urjc-excavation-world/launch/urjc_excavation_msr.launch.py
