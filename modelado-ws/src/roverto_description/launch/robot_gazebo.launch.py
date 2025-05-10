@@ -79,7 +79,7 @@ def generate_launch_description():
 
     robot_description_launcher = IncludeLaunchDescription(
         PathJoinSubstitution(
-            [FindPackageShare("roverto_description"), "launch", "robot_state_publisher.launch.py"] #Launcher que no genera descripcion correcta
+            [FindPackageShare("roverto_description"), "launch", "robot_state_publisher.launch.py"] 
         ),
     )
 
